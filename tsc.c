@@ -44,6 +44,11 @@
 
 //#include <builtins.h>
 
+static void begin() {
+}
+
+static void end() {
+}
 
 #define TYPE float
 
@@ -781,6 +786,7 @@ int s000()
 
 
 	init( "s000 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -791,6 +797,7 @@ int s000()
 		}
 		dummy((float*)X, (float*)Y, (float*)Z, (float*)U, (float*)V, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S000\t %.2f \t\t", clock_dif_sec);;
@@ -809,6 +816,7 @@ int s111()
 
 
 	init( "s111 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -818,6 +826,7 @@ int s111()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S111\t %.2f \t\t", clock_dif_sec);;
@@ -834,6 +843,7 @@ int s1111()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init("s111 ");
+	begin();
 	start_t = clock();
 	for (int nl = 0; nl < 2*ntimes; nl++) {
 		for (int i = 0; i < LEN/2; i++) {
@@ -841,6 +851,7 @@ int s1111()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif /1000000.0);
 	
@@ -861,6 +872,7 @@ int s112()
 
 
 	init( "s112 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 3*ntimes; nl++) {
@@ -870,6 +882,7 @@ int s112()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S112\t %.2f \t\t", clock_dif_sec);;
@@ -888,6 +901,7 @@ int s1112()
 	
 
 	init("s112 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes*3; nl++) {
@@ -896,6 +910,7 @@ int s1112()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif /1000000.0);
 	
@@ -916,6 +931,7 @@ int s113()
 
 
 	init( "s113 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -924,6 +940,7 @@ int s113()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S113\t %.2f \t\t", clock_dif_sec);;
@@ -941,6 +958,7 @@ int s1113()
 
 
 	init( "s113 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -949,6 +967,7 @@ int s1113()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1113\t %.2f \t\t", clock_dif_sec);;
@@ -969,6 +988,7 @@ int s114()
 
 
 	init( "s114 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 200*(ntimes/(LEN2)); nl++) {
@@ -980,6 +1000,7 @@ int s114()
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
 
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S114\t %.2f \t\t", clock_dif_sec);;
@@ -999,6 +1020,7 @@ int s115()
 
 
 	init( "s115 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 1000*(ntimes/LEN2); nl++) {
@@ -1009,6 +1031,7 @@ int s115()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S115\t %.2f \t\t", clock_dif_sec);;
@@ -1026,6 +1049,7 @@ int s1115()
 
 
 	init( "s115 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -1036,6 +1060,7 @@ int s1115()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1115\t %.2f \t\t", clock_dif_sec);;
@@ -1054,6 +1079,7 @@ int s116()
 
 
 	init( "s116 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes*10; nl++) {
@@ -1066,6 +1092,7 @@ int s116()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S116\t %.2f \t\t", clock_dif_sec);;
@@ -1085,6 +1112,7 @@ int s118()
 
 
 	init( "s118 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 200*(ntimes/LEN2); nl++) {
@@ -1095,6 +1123,7 @@ int s118()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S118\t %.2f \t\t", clock_dif_sec);;
@@ -1114,6 +1143,7 @@ int s119()
 	
 
 	init("s119 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 200*(ntimes/(LEN2)); nl++) {
@@ -1124,6 +1154,7 @@ int s119()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif /1000000.0);
 	
@@ -1143,6 +1174,7 @@ int s1119()
 	
 
 	init("s119 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 200*(ntimes/(LEN2)); nl++) {
@@ -1153,6 +1185,7 @@ int s1119()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif /1000000.0);
 	
@@ -1174,6 +1207,7 @@ int s121()
 
 
 	init( "s121 ");
+	begin();
 	start_t = clock();
 
 	int j;
@@ -1184,6 +1218,7 @@ int s121()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S121\t %.2f \t\t", clock_dif_sec);;
@@ -1204,6 +1239,7 @@ int s122(int n1, int n3)
 
 
 	init( "s122 ");
+	begin();
 	start_t = clock();
 
 	int j, k;
@@ -1216,6 +1252,7 @@ int s122(int n1, int n3)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S122\t %.2f \t\t", clock_dif_sec);;
@@ -1236,6 +1273,7 @@ int s123()
 
 
 	init( "s123 ");
+	begin();
 	start_t = clock();
 
 	int j;
@@ -1251,6 +1289,7 @@ int s123()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S123\t %.2f \t\t", clock_dif_sec);;
@@ -1270,6 +1309,7 @@ int s124()
 
 
 	init( "s124 ");
+	begin();
 	start_t = clock();
 
 	int j;
@@ -1286,6 +1326,7 @@ int s124()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S124\t %.2f \t\t", clock_dif_sec);;
@@ -1304,6 +1345,7 @@ int s125()
 
 
 	init( "s125 ");
+	begin();
 	start_t = clock();
 
 	int k;
@@ -1317,6 +1359,7 @@ int s125()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S125\t %.2f \t\t", clock_dif_sec);;
@@ -1335,6 +1378,7 @@ int s126()
 
 
 	init( "s126 ");
+	begin();
 	start_t = clock();
 
 	int k;
@@ -1349,6 +1393,7 @@ int s126()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S126\t %.2f \t\t", clock_dif_sec);;
@@ -1368,6 +1413,7 @@ int s127()
 
 
 	init( "s127 ");
+	begin();
 	start_t = clock();
 
 	int j;
@@ -1381,6 +1427,7 @@ int s127()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S127\t %.2f \t\t", clock_dif_sec);;
@@ -1401,6 +1448,7 @@ int s128()
 
 
 	init( "s128 ");
+	begin();
 	start_t = clock();
 
 	int j, k;
@@ -1414,6 +1462,7 @@ int s128()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S128\t %.2f \t\t", clock_dif_sec);;
@@ -1432,6 +1481,7 @@ int s131()
 
 
 	init( "s131 ");
+	begin();
 	start_t = clock();
 
 	int m  = 1;
@@ -1441,6 +1491,7 @@ int s131()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S131\t %.2f \t\t", clock_dif_sec);;
@@ -1458,6 +1509,7 @@ int s132()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s132 ");
+	begin();
 	start_t = clock();
 
 	int m = 0;
@@ -1469,6 +1521,7 @@ int s132()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S132\t %.2f \t\t", clock_dif_sec);;
@@ -1489,6 +1542,7 @@ int s141()
 
 
 	init( "s141 ");
+	begin();
 	start_t = clock();
 
 	int k;
@@ -1502,6 +1556,7 @@ int s141()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S141\t %.2f \t\t", clock_dif_sec);;
@@ -1527,12 +1582,14 @@ int s151()
 
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 	init( "s151 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 5*ntimes; nl++) {
 		s151s(a, b,  1);
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S151\t %.2f \t\t", clock_dif_sec);;
@@ -1557,6 +1614,7 @@ int s152()
 
 
 	init( "s152 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1566,6 +1624,7 @@ int s152()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S152\t %.2f \t\t", clock_dif_sec);;
@@ -1586,6 +1645,7 @@ int s161()
 
 
 	init( "s161 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -1602,6 +1662,7 @@ L10:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S161\t %.2f \t\t", clock_dif_sec);;
@@ -1620,6 +1681,7 @@ int s1161()
 
 
 	init( "s161 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1636,6 +1698,7 @@ L10:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1161\t %.2f \t\t", clock_dif_sec);;
@@ -1654,6 +1717,7 @@ int s162(int k)
 
 
 	init( "s162 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1664,6 +1728,7 @@ int s162(int k)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S162\t %.2f \t\t", clock_dif_sec);;
@@ -1682,6 +1747,7 @@ int s171(int inc)
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s171 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1690,6 +1756,7 @@ int s171(int inc)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S171\t %.2f \t\t", clock_dif_sec);;
@@ -1708,6 +1775,7 @@ int s172( int n1, int n3)
 
 
 	init( "s172 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1716,6 +1784,7 @@ int s172( int n1, int n3)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S172\t %.2f \t\t", clock_dif_sec);;
@@ -1734,6 +1803,7 @@ int s173()
 
 
 	init( "s173 ");
+	begin();
 	start_t = clock();
 
 	int k = LEN/2;
@@ -1743,6 +1813,7 @@ int s173()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S173\t %.2f \t\t", clock_dif_sec);;
@@ -1762,6 +1833,7 @@ int s174(int M)
 
 
 	init( "s174 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 10*ntimes; nl++) {
@@ -1770,6 +1842,7 @@ int s174(int M)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S174\t %.2f \t\t", clock_dif_sec);;
@@ -1789,6 +1862,7 @@ int s175(int inc)
 
 
 	init( "s175 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1797,6 +1871,7 @@ int s175(int inc)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S175\t %.2f \t\t", clock_dif_sec);;
@@ -1816,6 +1891,7 @@ int s176()
 
 
 	init( "s176 ");
+	begin();
 	start_t = clock();
 
 	int m = LEN/2;
@@ -1827,6 +1903,7 @@ int s176()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S176\t %.2f \t\t", clock_dif_sec);;
@@ -1852,6 +1929,7 @@ int s211()
 
 
 	init( "s211 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1861,6 +1939,7 @@ int s211()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S211\t %.2f \t\t", clock_dif_sec);;
@@ -1879,6 +1958,7 @@ int s212()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s212 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1888,6 +1968,7 @@ int s212()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S212\t %.2f \t\t", clock_dif_sec);;
@@ -1904,6 +1985,7 @@ int s1213()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s212 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1913,6 +1995,7 @@ int s1213()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1213\t %.2f \t\t", clock_dif_sec);;
@@ -1932,6 +2015,7 @@ int s221()
 
 
 	init( "s221 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -1941,6 +2025,7 @@ int s221()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S221\t %.2f \t\t", clock_dif_sec);;
@@ -1957,6 +2042,7 @@ int s1221()
 
 
 	init( "s221 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -1965,6 +2051,7 @@ int s1221()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1221\t %.2f \t\t", clock_dif_sec);;
@@ -1984,6 +2071,7 @@ int s222()
 
 
 	init( "s222 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -1994,6 +2082,7 @@ int s222()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S222\t %.2f \t\t", clock_dif_sec);;
@@ -2012,6 +2101,7 @@ int s231()
 
 
 	init( "s231 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -2022,6 +2112,7 @@ int s231()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S231\t %.2f \t\t", clock_dif_sec);;
@@ -2041,6 +2132,7 @@ int s232()
 
 
 	init( "s232 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/(LEN2)); nl++) {
@@ -2051,6 +2143,7 @@ int s232()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S232\t %.2f \t\t", clock_dif_sec);;
@@ -2068,6 +2161,7 @@ int s1232()
 
 
 	init( "s232 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -2078,6 +2172,7 @@ int s1232()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1232\t %.2f \t\t", clock_dif_sec);;
@@ -2097,6 +2192,7 @@ int s233()
 
 
 	init( "s233 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -2110,6 +2206,7 @@ int s233()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S233\t %.2f \t\t", clock_dif_sec);;
@@ -2127,6 +2224,7 @@ int s2233()
 
 
 	init( "s233 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -2140,6 +2238,7 @@ int s2233()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2233\t %.2f \t\t", clock_dif_sec);;
@@ -2158,6 +2257,7 @@ int s235()
 
 
 	init( "s235 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 200*(ntimes/LEN2); nl++) {
@@ -2169,6 +2269,7 @@ int s235()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S235\t %.2f \t\t", clock_dif_sec);;
@@ -2188,6 +2289,7 @@ int s241()
 
 
 	init( "s241 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -2197,6 +2299,7 @@ int s241()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S241\t %.2f \t\t", clock_dif_sec);;
@@ -2216,6 +2319,7 @@ int s242(float s1, float s2)
 
 
 	init( "s242 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/5; nl++) {
@@ -2224,6 +2328,7 @@ int s242(float s1, float s2)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S242\t %.2f \t\t", clock_dif_sec);;
@@ -2243,6 +2348,7 @@ int s243()
 
 
 	init( "s243 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2253,6 +2359,7 @@ int s243()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S243\t %.2f \t\t", clock_dif_sec);;
@@ -2272,6 +2379,7 @@ int s244()
 
 
 	init( "s244 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2282,6 +2390,7 @@ int s244()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S244\t %.2f \t\t", clock_dif_sec);;
@@ -2299,6 +2408,7 @@ int s1244()
 
 
 	init( "s244 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2308,6 +2418,7 @@ int s1244()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1244\t %.2f \t\t", clock_dif_sec);;
@@ -2325,6 +2436,7 @@ int s2244()
 
 
 	init( "s244 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2334,6 +2446,7 @@ int s2244()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2244\t %.2f \t\t", clock_dif_sec);;
@@ -2353,6 +2466,7 @@ int s251()
 
 
 	init( "s251 ");
+	begin();
 	start_t = clock();
 
 	float s;
@@ -2363,6 +2477,7 @@ int s251()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S251\t %.2f \t\t", clock_dif_sec);;
@@ -2380,6 +2495,7 @@ int s1251()
 
 
 	init( "s251 ");
+	begin();
 	start_t = clock();
 
 	float s;
@@ -2391,6 +2507,7 @@ int s1251()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1251\t %.2f \t\t", clock_dif_sec);;
@@ -2408,6 +2525,7 @@ int s2251()
 
 
 	init( "s251 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2419,6 +2537,7 @@ int s2251()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2251\t %.2f \t\t", clock_dif_sec);;
@@ -2435,6 +2554,7 @@ int s3251()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s251 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2445,6 +2565,7 @@ int s3251()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S3251\t %.2f \t\t", clock_dif_sec);;
@@ -2464,6 +2585,7 @@ int s252()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s252 ");
+	begin();
 	start_t = clock();
 
 	float t, s;
@@ -2476,6 +2598,7 @@ int s252()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S252\t %.2f \t\t", clock_dif_sec);;
@@ -2496,6 +2619,7 @@ int s253()
 
 
 	init( "s253 ");
+	begin();
 	start_t = clock();
 
 	float s;
@@ -2509,6 +2633,7 @@ int s253()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S253\t %.2f \t\t", clock_dif_sec);;
@@ -2528,6 +2653,7 @@ int s254()
 
 
 	init( "s254 ");
+	begin();
 	start_t = clock();
 
 	float x;
@@ -2539,6 +2665,7 @@ int s254()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S254\t %.2f \t\t", clock_dif_sec);;
@@ -2558,6 +2685,7 @@ int s255()
 
 
 	init( "s255 ");
+	begin();
 	start_t = clock();
 
 	float x, y;
@@ -2571,6 +2699,7 @@ int s255()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S255\t %.2f \t\t", clock_dif_sec);;
@@ -2590,6 +2719,7 @@ int s256()
 
 
 	init( "s256 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 10*(ntimes/LEN2); nl++) {
@@ -2601,6 +2731,7 @@ int s256()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S256\t %.2f \t\t", clock_dif_sec);;
@@ -2620,6 +2751,7 @@ int s257()
 
 
 	init( "s257 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 10*(ntimes/LEN2); nl++) {
@@ -2631,6 +2763,7 @@ int s257()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S257\t %.2f \t\t", clock_dif_sec);;
@@ -2648,6 +2781,7 @@ int s258()
 
 
 	init( "s258 ");
+	begin();
 	start_t = clock();
 
 	float s;
@@ -2662,6 +2796,7 @@ int s258()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S258\t %.2f \t\t", clock_dif_sec);;
@@ -2681,6 +2816,7 @@ int s261()
 
 
 	init( "s261 ");
+	begin();
 	start_t = clock();
 
 	float t;
@@ -2693,6 +2829,7 @@ int s261()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S261\t %.2f \t\t", clock_dif_sec);;
@@ -2710,6 +2847,7 @@ int s271()
 
 
 	init( "s271 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -2720,6 +2858,7 @@ int s271()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S271\t %.2f \t\t", clock_dif_sec);;
@@ -2739,6 +2878,7 @@ int s272(float t)
 
 
 	init( "s272 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2750,6 +2890,7 @@ int s272(float t)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S272\t %.2f \t\t", clock_dif_sec);;
@@ -2769,6 +2910,7 @@ int s273()
 
 
 	init( "s273 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2780,6 +2922,7 @@ int s273()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S273\t %.2f \t\t", clock_dif_sec);;
@@ -2799,6 +2942,7 @@ int s274()
 
 
 	init( "s274 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2812,6 +2956,7 @@ int s274()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S274\t %.2f \t\t", clock_dif_sec);;
@@ -2831,6 +2976,7 @@ int s275()
 
 
 	init( "s275 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 10*(ntimes/LEN2); nl++) {
@@ -2843,6 +2989,7 @@ int s275()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S275\t %.2f \t\t", clock_dif_sec);;
@@ -2859,6 +3006,7 @@ int s2275()
 
 
 	init( "s275 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -2870,6 +3018,7 @@ int s2275()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2275\t %.2f \t\t", clock_dif_sec);;
@@ -2889,6 +3038,7 @@ int s276()
 
 
 	init( "s276 ");
+	begin();
 	start_t = clock();
 
 	int mid = (LEN/2);
@@ -2902,6 +3052,7 @@ int s276()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S276\t %.2f \t\t", clock_dif_sec);;
@@ -2920,6 +3071,7 @@ int s277()
 
 
 	init( "s277 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2938,6 +3090,7 @@ L20:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S277\t %.2f \t\t", clock_dif_sec);;
@@ -2957,6 +3110,7 @@ int s278()
 
 
 	init( "s278 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -2973,6 +3127,7 @@ L30:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S278\t %.2f \t\t", clock_dif_sec);;
@@ -2992,6 +3147,7 @@ int s279()
 
 
 	init( "s279 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -3012,6 +3168,7 @@ L30:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S279\t %.2f \t\t", clock_dif_sec);;
@@ -3029,6 +3186,7 @@ int s1279()
 
 
 	init( "s279 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -3041,6 +3199,7 @@ int s1279()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1279\t %.2f \t\t", clock_dif_sec);;
@@ -3060,6 +3219,7 @@ int s2710( float x)
 
 
 	init( "s2710");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -3082,6 +3242,7 @@ int s2710( float x)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2710\t %.2f \t\t", clock_dif_sec);;
@@ -3100,6 +3261,7 @@ int s2711()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s2711");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -3110,6 +3272,7 @@ int s2711()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2711\t %.2f \t\t", clock_dif_sec);;
@@ -3129,6 +3292,7 @@ int s2712()
 
 
 	init( "s2712");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -3139,6 +3303,7 @@ int s2712()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2712\t %.2f \t\t", clock_dif_sec);;
@@ -3159,6 +3324,7 @@ int s281()
 
 
 	init( "s281 ");
+	begin();
 	start_t = clock();
 
 	float x;
@@ -3170,6 +3336,7 @@ int s281()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S281\t %.2f \t\t", clock_dif_sec);;
@@ -3188,6 +3355,7 @@ int s1281()
 
 
 	init( "s281 ");
+	begin();
 	start_t = clock();
 
 	float x;
@@ -3199,6 +3367,7 @@ int s1281()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1281\t %.2f \t\t", clock_dif_sec);;
@@ -3218,6 +3387,7 @@ int s291()
 
 
 	init( "s291 ");
+	begin();
 	start_t = clock();
 
 	int im1;
@@ -3229,6 +3399,7 @@ int s291()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S291\t %.2f \t\t", clock_dif_sec);;
@@ -3249,6 +3420,7 @@ int s292()
 
 
 	init( "s292 ");
+	begin();
 	start_t = clock();
 
 	int im1, im2;
@@ -3262,6 +3434,7 @@ int s292()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S292\t %.2f \t\t", clock_dif_sec);;
@@ -3280,6 +3453,7 @@ int s293()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "s293 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -3288,6 +3462,7 @@ int s293()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S293\t %.2f \t\t", clock_dif_sec);;
@@ -3308,6 +3483,7 @@ int s2101()
 
 
 	init( "s2101");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 10*ntimes; nl++) {
@@ -3316,6 +3492,7 @@ int s2101()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2101\t %.2f \t\t", clock_dif_sec);;
@@ -3335,6 +3512,7 @@ int s2102()
 
 
 	init( "s2102");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 100*(ntimes/LEN2); nl++) {
@@ -3346,6 +3524,7 @@ int s2102()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2102\t %.2f \t\t", clock_dif_sec);;
@@ -3364,6 +3543,7 @@ int s2111()
 
 
 	init( "s2111");
+	begin();
 	start_t = clock();
 	for (int nl = 0; nl < 100*(ntimes/(LEN2)); nl++) {
 		for (int j = 1; j < LEN2; j++) {
@@ -3373,6 +3553,7 @@ int s2111()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S2111\t %.2f \t\t", clock_dif_sec);;
@@ -3404,6 +3585,7 @@ int s311()
 
 
 	init( "s311 ");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -3414,6 +3596,7 @@ int s311()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, sum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S311\t %.2f \t\t", clock_dif_sec);;
@@ -3439,6 +3622,7 @@ int s31111()
 
 
 	init( "s311 ");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -3454,6 +3638,7 @@ int s31111()
 		sum += test(&a[28]);
 		dummy(a, b, c, d, e, aa, bb, cc, sum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S31111\t %.2f \t\t", clock_dif_sec);;
@@ -3473,6 +3658,7 @@ int s312()
 
 
 	init( "s312 ");
+	begin();
 	start_t = clock();
 
 	float prod;
@@ -3483,6 +3669,7 @@ int s312()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, prod);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S312\t %.2f \t\t", clock_dif_sec);;
@@ -3502,6 +3689,7 @@ int s313()
 
 
 	init( "s313 ");
+	begin();
 	start_t = clock();
 
 	float dot;
@@ -3512,6 +3700,7 @@ int s313()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, dot);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S313\t %.2f \t\t", clock_dif_sec);;
@@ -3532,6 +3721,7 @@ int s314()
 
 
 	init( "s314 ");
+	begin();
 	start_t = clock();
 
 	float x;
@@ -3544,6 +3734,7 @@ int s314()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, x);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S314\t %.2f \t\t", clock_dif_sec);;
@@ -3564,6 +3755,7 @@ int s315()
 
 
 	init( "s315 ");
+	begin();
 	for (int i = 0; i < LEN; i++)
 		a[i] = (i * 7) % LEN;
 	start_t = clock();
@@ -3582,6 +3774,7 @@ int s315()
 		chksum = x + (float) index;
 		dummy(a, b, c, d, e, aa, bb, cc, chksum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S315\t %.2f \t\t", clock_dif_sec);;
@@ -3602,6 +3795,7 @@ int s316()
 
 
 	init( "s316 ");
+	begin();
 	start_t = clock();
 
 	float x;
@@ -3614,6 +3808,7 @@ int s316()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, x);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S316\t %.2f \t\t", clock_dif_sec);;
@@ -3635,6 +3830,7 @@ int s317()
 
 
 	init( "s317 ");
+	begin();
 	start_t = clock();
 
 	float q;
@@ -3645,6 +3841,7 @@ int s317()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, q);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S317\t %.2f \t\t", clock_dif_sec);;
@@ -3666,6 +3863,7 @@ int s318( int inc)
 
 
 	init( "s318 ");
+	begin();
 	start_t = clock();
 
 	int k, index;
@@ -3687,6 +3885,7 @@ L5:
 		chksum = max + (float) index;
 		dummy(a, b, c, d, e, aa, bb, cc, chksum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S318\t %.2f \t\t", clock_dif_sec);;
@@ -3707,6 +3906,7 @@ int s319()
 
 
 	init( "s319 ");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -3720,6 +3920,7 @@ int s319()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, sum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S319\t %.2f \t\t", clock_dif_sec);;
@@ -3741,6 +3942,7 @@ int s3110()
 
 
 	init( "s3110");
+	begin();
 	start_t = clock();
 
 	int xindex, yindex;
@@ -3761,6 +3963,7 @@ int s3110()
 		chksum = max + (float) xindex + (float) yindex;
 		dummy(a, b, c, d, e, aa, bb, cc, chksum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S3110\t %.2f \t\t", clock_dif_sec);;
@@ -3779,6 +3982,7 @@ int s13110()
 
 
 	init( "s3110");
+	begin();
 	start_t = clock();
 
 	int xindex, yindex;
@@ -3797,6 +4001,7 @@ int s13110()
 		chksum = max + (float) xindex + (float) yindex;
 		dummy(a, b, c, d, e, aa, bb, cc, chksum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S13110\t %.2f \t\t", clock_dif_sec);;
@@ -3817,6 +4022,7 @@ int s3111()
 
 
 	init( "s3111");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -3829,6 +4035,7 @@ int s3111()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, sum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S3111\t %.2f \t\t", clock_dif_sec);;
@@ -3849,6 +4056,7 @@ int s3112()
 
 
 	init( "s3112");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -3860,6 +4068,7 @@ int s3112()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, sum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S3112\t %.2f \t\t", clock_dif_sec);;
@@ -3880,6 +4089,7 @@ int s3113()
 
 
 	init( "s3113");
+	begin();
 	start_t = clock();
 
 	float max;
@@ -3892,6 +4102,7 @@ int s3113()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, max);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S3113\t %.2f \t\t", clock_dif_sec);;
@@ -3912,6 +4123,7 @@ int s321()
 
 
 	init( "s321 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -3920,6 +4132,7 @@ int s321()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S321\t %.2f \t\t", clock_dif_sec);;
@@ -3939,6 +4152,7 @@ int s322()
 
 
 	init( "s322 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -3947,6 +4161,7 @@ int s322()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S322\t %.2f \t\t", clock_dif_sec);;
@@ -3966,6 +4181,7 @@ int s323()
 
 
 	init( "s323 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -3975,6 +4191,7 @@ int s323()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S323\t %.2f \t\t", clock_dif_sec);;
@@ -3994,6 +4211,7 @@ int s331()
 
 
 	init( "s331 ");
+	begin();
 	start_t = clock();
 
 	int j;
@@ -4008,6 +4226,7 @@ int s331()
 		chksum = (float) j;
 		dummy(a, b, c, d, e, aa, bb, cc, chksum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S331\t %.2f \t\t", clock_dif_sec);;
@@ -4035,6 +4254,7 @@ int s332( float t)
 
 
 	init( "s332 ");
+	begin();
 	start_t = clock();
 
 	int index;
@@ -4054,6 +4274,7 @@ L20:
 		chksum = value + (float) index;
 		dummy(a, b, c, d, e, aa, bb, cc, chksum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S332\t %.2f \t\t", clock_dif_sec);;
@@ -4076,6 +4297,7 @@ int s341()
 	start_t = clock();
 
 	init( "s341 ");
+	begin();
 	start_t = clock();
 
 	int j;
@@ -4089,6 +4311,7 @@ int s341()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S341\t %.2f \t\t", clock_dif_sec);;
@@ -4109,6 +4332,7 @@ int s342()
 	start_t = clock();
 
 	init( "s342 ");
+	begin();
 	start_t = clock();
 
 	int j = 0;
@@ -4122,6 +4346,7 @@ int s342()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S342\t %.2f \t\t", clock_dif_sec);;
@@ -4142,6 +4367,7 @@ int s343()
 	start_t = clock();
 
 	init( "s343 ");
+	begin();
 	start_t = clock();
 
 	int k;
@@ -4157,6 +4383,7 @@ int s343()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S343\t %.2f \t\t", clock_dif_sec);;
@@ -4176,6 +4403,7 @@ int s351()
 	start_t = clock();
 
 	init( "s351 ");
+	begin();
 	start_t = clock();
 
 	float alpha = c[0];
@@ -4189,6 +4417,7 @@ int s351()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S351\t %.2f \t\t", clock_dif_sec);;
@@ -4205,6 +4434,7 @@ int s1351()
 	start_t = clock();
 
 	init( "s351 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 8*ntimes; nl++) {
@@ -4219,6 +4449,7 @@ int s1351()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1351\t %.2f \t\t", clock_dif_sec);;
@@ -4238,6 +4469,7 @@ int s352()
 	start_t = clock();
 
 	init( "s352 ");
+	begin();
 	start_t = clock();
 
 	float dot;
@@ -4249,6 +4481,7 @@ int s352()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, dot);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S352\t %.2f \t\t", clock_dif_sec);;
@@ -4270,6 +4503,7 @@ int s353(int* __restrict__ ip)
 	start_t = clock();
 
 	init( "s353 ");
+	begin();
 	start_t = clock();
 
 	float alpha = c[0];
@@ -4283,6 +4517,7 @@ int s353(int* __restrict__ ip)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S353\t %.2f \t\t", clock_dif_sec);;
@@ -4308,6 +4543,7 @@ int s421()
 	set1d(xx, 1., 1);
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 	init( "s421 ");
+	begin();
 	start_t = clock();
 
 
@@ -4318,6 +4554,7 @@ int s421()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S421\t %.2f \t\t", clock_dif_sec);;
@@ -4338,6 +4575,7 @@ int s1421()
 	set1d(xx, 1., 1);
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 	init( "s421 ");
+	begin();
 	start_t = clock();
 
 	xx = &b[LEN/2];
@@ -4347,6 +4585,7 @@ int s1421()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S1421\t %.2f \t\t", clock_dif_sec);;
@@ -4371,6 +4610,7 @@ int s422()
 	set1d(xx, 0., 1);
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 	init( "s422 ");
+	begin();
 	start_t = clock();
 
 
@@ -4381,6 +4621,7 @@ int s422()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S422\t %.2f \t\t", clock_dif_sec);;
@@ -4405,6 +4646,7 @@ int s423()
 	set1d(xx, 1., 1);
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 	init( "s423 ");
+	begin();
 	start_t = clock();
 	for (int nl = 0; nl < 4*ntimes; nl++) {
 		for (int i = 0; i < LEN - 1; i++) {
@@ -4412,6 +4654,7 @@ int s423()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S423\t %.2f \t\t", clock_dif_sec);;
@@ -4438,6 +4681,7 @@ int s424()
 	set1d(xx, 0., 1);
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 	init( "s424 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -4446,6 +4690,7 @@ int s424()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 1.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S424\t %.2f \t\t", clock_dif_sec);;
@@ -4472,6 +4717,7 @@ int s431()
 
 
 	init( "s431 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes*10; nl++) {
@@ -4480,6 +4726,7 @@ int s431()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S431\t %.2f \t\t", clock_dif_sec);;
@@ -4499,6 +4746,7 @@ int s441()
 
 
 	init( "s441 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -4513,6 +4761,7 @@ int s441()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S441\t %.2f \t\t", clock_dif_sec);;
@@ -4532,6 +4781,7 @@ int s442()
 
 
 	init( "s442 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -4558,6 +4808,7 @@ L50:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S442\t %.2f \t\t", clock_dif_sec);;
@@ -4577,6 +4828,7 @@ int s443()
 
 
 	init( "s443 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -4596,6 +4848,7 @@ L50:
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S443\t %.2f \t\t", clock_dif_sec);;
@@ -4615,6 +4868,7 @@ int s451()
 
 
 	init( "s451 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/5; nl++) {
@@ -4623,6 +4877,7 @@ int s451()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S451\t %.2f \t\t", clock_dif_sec);;
@@ -4642,6 +4897,7 @@ int s452()
 
 
 	init( "s452 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -4650,6 +4906,7 @@ int s452()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S452\t %.2f \t\t", clock_dif_sec);;
@@ -4669,6 +4926,7 @@ int s453()
 
 
 	init( "s453 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes*2; nl++) {
@@ -4679,6 +4937,7 @@ int s453()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S453\t %.2f \t\t", clock_dif_sec);;
@@ -4698,6 +4957,7 @@ int s471(){
 
 
 	init( "s471 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes/2; nl++) {
@@ -4708,6 +4968,7 @@ int s471(){
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S471\t %.2f \t\t", clock_dif_sec);;
@@ -4731,6 +4992,7 @@ int s481()
 
 
 	init( "s481 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -4742,6 +5004,7 @@ int s481()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S481\t %.2f \t\t", clock_dif_sec);;
@@ -4762,6 +5025,7 @@ int s482()
 
 
 	init( "s482 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -4771,6 +5035,7 @@ int s482()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S482\t %.2f \t\t", clock_dif_sec);;
@@ -4796,6 +5061,7 @@ int s491(int* __restrict__ ip)
 
 
 	init( "s491 ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -4804,6 +5070,7 @@ int s491(int* __restrict__ ip)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S491\t %.2f \t\t", clock_dif_sec);;
@@ -4824,6 +5091,7 @@ int s4112(int* __restrict__ ip, float s)
 
 
 	init( "s4112");
+	begin();
 	start_t = clock();
 	for (int nl = 0; nl < ntimes; nl++) {
 		for (int i = 0; i < LEN; i++) {
@@ -4831,6 +5099,7 @@ int s4112(int* __restrict__ ip, float s)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4112\t %.2f \t\t", clock_dif_sec);;
@@ -4851,6 +5120,7 @@ int s4113(int* __restrict__ ip)
 
 
 	init( "s4113");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -4859,6 +5129,7 @@ int s4113(int* __restrict__ ip)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4113\t %.2f \t\t", clock_dif_sec);;
@@ -4879,6 +5150,7 @@ int s4114(int* ip, int n1)
 
 
 	init( "s4114");
+	begin();
 	start_t = clock();
 
 	int k;
@@ -4890,6 +5162,7 @@ int s4114(int* ip, int n1)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4114\t %.2f \t\t", clock_dif_sec);;
@@ -4910,6 +5183,7 @@ int s4115(int* __restrict__ ip)
 
 
 	init( "s4115");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -4920,6 +5194,7 @@ int s4115(int* __restrict__ ip)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4115\t %.2f \t\t", clock_dif_sec);;
@@ -4941,6 +5216,7 @@ int s4116(int* __restrict__ ip, int j, int inc)
 
 
 	init( "s4116");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -4953,6 +5229,7 @@ int s4116(int* __restrict__ ip, int j, int inc)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4116\t %.2f \t\t", clock_dif_sec);;
@@ -4973,6 +5250,7 @@ int s4117()
 
 
 	init( "s4117");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -4981,6 +5259,7 @@ int s4117()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4117\t %.2f \t\t", clock_dif_sec);;
@@ -5000,6 +5279,7 @@ int s4121()
 
 
 	init( "s4121");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -5008,6 +5288,7 @@ int s4121()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("S4121\t %.2f \t\t", clock_dif_sec);;
@@ -5026,6 +5307,7 @@ int va()
 	clock_t start_t, end_t, clock_dif; double clock_dif_sec;
 
 	init( "va	");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes*10; nl++) {
@@ -5034,6 +5316,7 @@ int va()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("va\t %.2f \t\t", clock_dif_sec);;
@@ -5054,6 +5337,7 @@ int vag( int* __restrict__ ip)
 
 
 	init( "vag  ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -5062,6 +5346,7 @@ int vag( int* __restrict__ ip)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vag\t %.2f \t\t", clock_dif_sec);;
@@ -5082,6 +5367,7 @@ int vas( int* __restrict__ ip)
 
 
 	init( "vas  ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 2*ntimes; nl++) {
@@ -5090,6 +5376,7 @@ int vas( int* __restrict__ ip)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vas\t %.2f \t\t", clock_dif_sec);;
@@ -5109,6 +5396,7 @@ int vif()
 
 
 	init( "vif  ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -5119,6 +5407,7 @@ int vif()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vif\t %.2f \t\t", clock_dif_sec);;
@@ -5138,6 +5427,7 @@ int vpv()
 
 
 	init( "vpv  ");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes*10; nl++) {
@@ -5146,6 +5436,7 @@ int vpv()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vpv\t %.2f \t\t", clock_dif_sec);;
@@ -5165,6 +5456,7 @@ int vtv()
 
 
 	init( "vtv  ");
+	begin();
 	start_t = clock();
 
 	// Function Body
@@ -5174,6 +5466,7 @@ int vtv()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vtv\t %.2f \t\t", clock_dif_sec);;
@@ -5193,6 +5486,7 @@ int vpvtv()
 
 
 	init( "vpvtv");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -5201,6 +5495,7 @@ int vpvtv()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vpvtv\t %.2f \t\t", clock_dif_sec);;
@@ -5220,6 +5515,7 @@ int vpvts( float s)
 
 
 	init( "vpvts");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < ntimes; nl++) {
@@ -5228,6 +5524,7 @@ int vpvts( float s)
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vpvts\t %.2f \t\t", clock_dif_sec);;
@@ -5247,6 +5544,7 @@ int vpvpv()
 
 
 	init( "vpvpv");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -5255,6 +5553,7 @@ int vpvpv()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vpvpv\t %.2f \t\t", clock_dif_sec);;
@@ -5274,6 +5573,7 @@ int vtvtv()
 
 
 	init( "vtvtv");
+	begin();
 	start_t = clock();
 
 	for (int nl = 0; nl < 4*ntimes; nl++) {
@@ -5282,6 +5582,7 @@ int vtvtv()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vtvtv\t %.2f \t\t", clock_dif_sec);;
@@ -5301,6 +5602,7 @@ int vsumr()
 
 
 	init( "vsumr");
+	begin();
 	start_t = clock();
 
 	float sum;
@@ -5311,6 +5613,7 @@ int vsumr()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, sum);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vsumr\t %.2f \t\t", clock_dif_sec);;
@@ -5330,6 +5633,7 @@ int vdotr()
 
 
 	init( "vdotr");
+	begin();
 	start_t = clock();
 
 	float dot;
@@ -5340,6 +5644,7 @@ int vdotr()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, dot);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vdotr\t %.2f \t\t", clock_dif_sec);;
@@ -5361,6 +5666,7 @@ int vbor()
 
 
 	init( "vbor ");
+	begin();
 	start_t = clock();
 
 	float a1, b1, c1, d1, e1, f1;
@@ -5383,6 +5689,7 @@ int vbor()
 		}
 		dummy(a, b, c, d, e, aa, bb, cc, 0.);
 	}
+	end();
 	end_t = clock(); clock_dif = end_t - start_t;
 	clock_dif_sec = (double) (clock_dif/1000000.0);
 	printf("vbor\t %.2f \t\t", clock_dif_sec);;
